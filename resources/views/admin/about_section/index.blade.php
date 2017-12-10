@@ -1,13 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+
+
 <div class="row">
     <div class="col-lg-12">
         @if(Session::has('success_msg'))
         <div class="alert alert-success">{{ Session::get('success_msg') }}</div>
         @endif
     <!-- Posts list -->
-    @if(!empty($about))
+    @if(!empty($posts))
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
@@ -28,34 +30,40 @@
                          <th width="40%">Mission</th>
                         <th width="15%">Vision</th>
                         <th width="20%">Goal</th>
+                        <th>Action</th>
                         
                     </thead>
     
                     <!-- Table Body -->
                     <tbody>
-                    @foreach($about as $a)
+                    @foreach($posts as $post)
                         <tr>
                             <td class="table-text">
-                                <div>{{$a->introduction_content}}</div>
+                                <div>{{$post['introduction_content']}}</div>
                             </td>
                             <td class="table-text">
-                                <div>{{$a->implementation_content}}</div>
+                                <div>{{$post->implementation_content}}</div>
                             </td>
                                 <td class="table-text">
-                                <div>{{$a->sponsorship_content}}</div>
+                                <div>{{$post->sponsorship_content}}</div>
                             </td>
                             <td class="table-text">
-                                <div>{{$a->executive_summary_content}}</div>
+                                <div>{{$post->executive_summary_content}}</div>
                             </td>
                             <td class="table-text">
-                                <div>{{$a->mission_content}}</div>
+                                <div>{{$post->mission_content}}</div>
                             </td>
                                 <td class="table-text">
-                                <div>{{$a->vision_content}}</div>
+                                <div>{{$post->vision_content}}</div>
                             </td>
                              </td>
                                 <td class="table-text">
-                                <div>{{$a->goal_content}}</div>
+                                <div>{{$post->goal_content}}</div>
+                            </td>
+
+                            <td>
+                            {{--  <a href="{{ route('posts.edit', $post->id) }}" class="label label-warning">Edit</a>  --}}
+                            <a href="{{route('admin.about_section.edit', $post->id) }}" class="label label-info">Edit</a>
                             </td>
                            
                         </tr>

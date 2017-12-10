@@ -24,6 +24,8 @@ class CreateAboutSectionTable extends Migration
             $table->text('mission_content');
             $table->text('vision_content');
             $table->text('goal_content');
+            $table->timestamps();
+            
 
             //
         });

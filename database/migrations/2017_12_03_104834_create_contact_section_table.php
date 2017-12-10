@@ -23,6 +23,7 @@ class CreateContactSectionTable extends Migration
             $table->string('admin_location');
             $table->integer('admin_phone');
             $table->string('admin_email')->unique();
+            $table->timestamps();
             //
         });
         

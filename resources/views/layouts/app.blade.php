@@ -4,6 +4,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {!! HTML::style('/packages/bootstrap/css/bootstrap.min.css') !!}
+    {!! HTML::style('/assets/css/style.css') !!}
+    {!! HTML::script('https://code.jquery.com/jquery-2.1.4.min.js') !!}
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="/vendor/jasekz/laradrop/css/styles.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js" ></script>
+        <script src="/vendor/jasekz/laradrop/js/enyo.dropzone.js"></script>
+        <script src="/vendor/jasekz/laradrop/js/laradrop.js"></script>
+
+    @yield('head')
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -53,6 +66,11 @@
 
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
+                                        <a href="#"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Profile
+                                        </a>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -71,10 +89,25 @@
             </div>
         </nav>
 
+
+    <div class="laradrop" laradrop-csrf-token="{{ csrf_token() }}"> </div>
+
         @yield('content')
     </div>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+
+    @yield('scripts');
 </body>
+
+@yield('footer')
+
+
+
+<script>
+    jQuery(document).ready(function(){
+        jQuery('.laradrop').laradrop();
+    });
+    </script>
 </html>

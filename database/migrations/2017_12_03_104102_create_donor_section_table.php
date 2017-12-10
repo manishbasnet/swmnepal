@@ -20,6 +20,8 @@ class CreateDonorSectionTable extends Migration
             $table->string('donor_name');
             $table->float('donor_amount');
             $table->text('donor_info');
+            $table->string('donor_picture');
+            $table->timestamps();
             //
         });
         

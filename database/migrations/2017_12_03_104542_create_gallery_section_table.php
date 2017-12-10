@@ -20,6 +20,7 @@ class CreateGallerySectionTable extends Migration
             $table->string('gallery_name');
             $table->date('galllery_date');
             $table->string('gallery_photo');
+            $table->timestamps();
             //
         });
         

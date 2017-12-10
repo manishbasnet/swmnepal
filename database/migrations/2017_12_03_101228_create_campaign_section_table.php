@@ -20,6 +20,7 @@ class CreateCampaignSectionTable extends Migration
             $table->string('campaign_name', 100);
             $table->text('campaign_description');
             $table->string('campaign_featured_picture');
+            $table->timestamps();
 
             //
         });

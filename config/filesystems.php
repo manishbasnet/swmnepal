@@ -28,6 +28,19 @@ return [
 
     'cloud' => env('FILESYSTEM_CLOUD', 's3'),
 
+
+
+
+
+    'laradrop' => [
+        'driver' => 'local',
+        'root' => public_path('uploads'), // will put files in 'public/upload' directory
+    ],
+
+
+
+
+
     /*
     |--------------------------------------------------------------------------
     | Filesystem Disks
