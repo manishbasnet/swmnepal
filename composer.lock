@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ce5583234b191250280e3120e1fd45cc",
+    "content-hash": "4a5f9de9d066d79be08dd28ed7fc7b1a",
     "packages": [
         {
             "name": "baum/baum",
@@ -468,54 +468,6 @@
                 }
             ],
             "time": "2015-04-20T18:58:01+00:00"
-        },
-        {
-            "name": "jasekz/laradrop",
-            "version": "1.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jasekz/laradrop.git",
-                "reference": "819b6c8b92fc19c0171885c9ebfca9942f510429"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jasekz/laradrop/zipball/819b6c8b92fc19c0171885c9ebfca9942f510429",
-                "reference": "819b6c8b92fc19c0171885c9ebfca9942f510429",
-                "shasum": ""
-            },
-            "require": {
-                "baum/baum": "~1.1",
-                "ext-fileinfo": "*",
-                "illuminate/support": "~5.0",
-                "intervention/image": "2.*",
-                "php": ">=5.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Jasekz\\Laradrop": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jasek Zbigniew",
-                    "email": "zig@elegrit.com",
-                    "homepage": "http://elegrit.com"
-                }
-            ],
-            "description": "File manager using Dropzone.js for Laravel 5",
-            "keywords": [
-                "dropzone.js",
-                "file manager",
-                "file upload",
-                "laravel 5",
-                "php"
-            ],
-            "time": "2017-11-03T18:09:03+00:00"
         },
         {
             "name": "laravel/framework",

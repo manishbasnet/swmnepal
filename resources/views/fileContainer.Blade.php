@@ -1,4 +1,4 @@
-<div class="laradrop-thumbnail thumbnail laradrop-droppable col-md-2 laradrop-draggable "  file-id="[[id]]">
+{{-- <div class="laradrop-thumbnail thumbnail laradrop-droppable col-md-2 laradrop-draggable "  file-id="[[id]]">
     <div class=" well" >
         <h4 class="laradrop-filealias" >[[alias]]</h4>
         <p class="text-info">[[type]] / [[updated_at]]</p>
@@ -10,3 +10,4 @@
         <img src="[[fileSrc]]" alt="[[alias]]" >
     </div>
 </div>
+ --}}

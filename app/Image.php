@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Image extends Model
 {
     //
-
+	 protected $table = 'campaign_images';
     public static $rules = [
         'file' => 'required|mimes:png,gif,jpeg,jpg,bmp'
     ];

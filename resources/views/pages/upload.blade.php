@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.app')
 
 @section('head')
     {!! HTML::style('/packages/dropzone/dropzone.css') !!}
@@ -18,8 +18,8 @@
                 <h3>Images - 1<span id="photoCounter"></span></h3>
                 <br />
 
-                {!! Form::open(['url' => route('upload-post'), 'class' => 'dropzone', 'files'=>true, 'id'=>'real-dropzone']) !!}
-
+                <form method="POST" action="http://localhost/swmnepal/public/upload" accept-charset="UTF-8" class="dropzone" id="real-dropzone" enctype="multipart/form-data">
+                {{csrf_field()}}
                 <div class="dz-message">
 
                 </div>
@@ -32,7 +32,7 @@
 
                 <h4 style="text-align: center;color:#428bca;">Drop images in this area  <span class="glyphicon glyphicon-hand-down"></span></h4>
 
-                {!! Form::close() !!}
+                </form>
 
             </div>
             <div class="jumbotron how-to-create">

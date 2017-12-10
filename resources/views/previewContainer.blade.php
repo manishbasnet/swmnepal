@@ -1,4 +1,4 @@
-<div class="files">
+{{-- <div class="files">
     <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" >
         <div class="progress-bar progress-bar-success"  data-dz-uploadprogress></div>
 	</div>
@@ -15,4 +15,4 @@
                 Cancel
             </button>
     </div>
-</div>
+</div> --}}

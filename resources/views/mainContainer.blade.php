@@ -1,4 +1,4 @@
-<div class="laradrop-container" id="laradrop-container-[[uid]]" >
+{{-- <div class="laradrop-container" id="laradrop-container-[[uid]]" >
     
     <button type="button" class="btn btn-default btn-add-folder">{!! trans('laradrop::app.addFolder') !!}</button>
     <button type="button" class="btn btn-default btn-add-files">{!! trans('laradrop::app.uploadFiles') !!}</button>
@@ -9,4 +9,4 @@
     
     <div class="laradrop-previews" ></div>
     <div class="laradrop-body" ></div>
-</div>
+</div> --}}

@@ -40,7 +40,7 @@ Route::get('/campaign/create', 'CampaignController@create')->name('admin.campaig
 Route::get('/campaign/delete/{id}','CampaignController@delete')->name('admin.campaign_section.delete');
 
 
-//for upload and view image
+//for upload and view image 
 
 
 Route::get('/campaign/upload','CampaignController@create')->name('admin.campaign_section.create');
@@ -93,13 +93,15 @@ Route::get('/contact/create', 'ContactController@create')->name('admin.contact_s
 
 //dropzone 
 
-Route::get('/', ['as' => 'upload', 'uses' => 'IController@getUpload']);
-Route::post('upload', ['as' => 'upload-post', 'uses' =>'IController@postUpload']);
-Route::post('upload/delete', ['as' => 'upload-remove', 'uses' =>'IController@deleteUpload']);
+Route::get('/', ['as' => 'upload', 'uses' => 'CampaignController@getUpload']);
+//Route::post('upload', ['as' => 'upload-post', 'uses' =>'IController@postUpload2']);
+Route::post('upload', 'CampaignController@showUploadFile');
 
-Route::get('example-2', ['as' => 'upload-2', 'uses' => 'IController@getServerImagesPage']);
-Route::get('server-images', ['as' => 'server-images', 'uses' => 'IController@getServerImages']);
-Route::get('example-3', ['as' => 'upload-3', 'uses' => 'IController@getUpload3']);
+Route::post('upload/delete', ['as' => 'upload-remove', 'uses' =>'CampaignController@deleteUpload']);
+
+Route::get('example-2', ['as' => 'upload-2', 'uses' => 'CampaignController@getServerImagesPage']);
+Route::get('server-images', ['as' => 'server-images', 'uses' => 'CampaignController@getServerImages']);
+Route::get('example-3', ['as' => 'upload-3', 'uses' => 'CampaignController@getUpload3']);
 
 
 
